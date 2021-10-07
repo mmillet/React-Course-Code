@@ -1,0 +1,6 @@
+.line {
+  background-color: #ddd;
+}
+.line.even-style {
+  background-color: #aaa;
+}

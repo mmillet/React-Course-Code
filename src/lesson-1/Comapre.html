@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://unpkg.com/react@15/dist/react.min.js"></script>
+    <script src="https://unpkg.com/react-dom@15/dist/react-dom.min.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+    <title>Document</title>
+    <style type="text/css">
+      #pure {
+        position: absolute;
+        left: 20px;
+      }
+      #react {
+        position: absolute;
+        left: 200px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="pure"></div>
+    <div id="react"></div>
+  </body>
+  <!-- 原生 JS 实现 -->
+  <script>
+    const list = ['张三', '李四'];
+    const button = document.createElement('button');
+    button.innerText = 'ADD';
+    const containerEle = document.getElementById('pure');
+    containerEle.appendChild(button);
+    button.addEventListener('click', onAddUser);
+    showList();
+
+    function onAddUser() {
+      list.push('老王');
+      showList();
+    }
+
+    function showList() {
+      var ulEle = containerEle.querySelector('ul');
+      if (!ulEle) {
+        ulEle = document.createElement('ul');
+        containerEle.appendChild(ulEle);
+      }
+      ulEle.innerHTML = list.map(item => `<li>${item}</li>`).join('');
+    }
+  </script>
+
+  <!-- React 实现 -->
+  <script type="text/babel">
+    class List extends React.Component {
+      state = {
+        list: ['张三', '李四'],
+      };
+      onAddUser = () => {
+        this.setState({ list: [...this.state.list, '老王'] });
+      };
+      render() {
+        return (
+          <div>
+            <button onClick={this.onAddUser}>ADD</button>
+            <ul>
+              {this.state.list.map(item => (
+                <li>{item}</li>
+              ))}
+            </ul>
+          </div>
+        );
+      }
+    }
+    ReactDOM.render(<List />, document.getElementById('react'));
+  </script>
+</html>
