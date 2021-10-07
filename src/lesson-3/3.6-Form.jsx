@@ -19,7 +19,7 @@ export default class NameForm extends React.Component {
     return (
       <form onSubmit={this.handleSubmit}>
         <label>
-          名字:
+          名字：
           <input
             type="text"
             value={this.state.value}
