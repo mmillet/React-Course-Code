@@ -1,11 +1,7 @@
 import React from 'react';
 
-function Lesson4() {
-  return (
-    <div>
-      Lesson4
-    </div>
-  );
+function Caculator() {
+  return <div>TODO</div>;
 }
 
-export default Lesson4;
+export default Caculator;
