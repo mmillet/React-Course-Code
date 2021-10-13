@@ -48,11 +48,7 @@ const FoodList = () => {
                     <div className="order-food-list-image">
                       <img src={food.image} />
                     </div>
-                    <div
-                      className={`order-food-list-meta ${
-                        selfSelected ? `order-food-list-meta--active` : ''
-                      }`}
-                    >
+                    <div className="order-food-list-meta">
                       <h3>{food.name}</h3>
                       <em>¥{food.price}</em>
                     </div>
@@ -60,7 +56,9 @@ const FoodList = () => {
                       {count > 0 && (
                         <>
                           <i onClick={() => onUpdateOrder(food.id, false)}>-</i>
-                          <b>{count}</b>
+                          <b className={selfSelected ? 'active' : ''}>
+                            {count}
+                          </b>
                         </>
                       )}
                       <i onClick={() => onUpdateOrder(food.id, true)}>+</i>

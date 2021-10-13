@@ -41,7 +41,11 @@ const getOrders = async () => {
 // 设置单个点餐信息
 const setOrder = async (user, order) => {
   const orderFilename = path.join(ORDER_PATH, `${user}.json`);
-  await fs.writeJSON(orderFilename, order, { replacer: ' ', spaces: 2 });
+  if (Object.keys(order).length === 0) {
+    await fs.remove(orderFilename);
+  } else {
+    await fs.writeJSON(orderFilename, order, { replacer: ' ', spaces: 2 });
+  }
   return true;
 };
 

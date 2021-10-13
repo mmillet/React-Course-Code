@@ -45,9 +45,6 @@
       font-style: normal;
       font-size: 18px;
     }
-    &--active {
-      color: #f23c39;
-    }
   }
 
   &-control {
@@ -70,7 +67,9 @@
     b {
       display: inline-block;
       margin: 0 6px;
-      color: #f23c39;
+      &.active {
+        color: #f23c39;
+      }
     }
   }
 }
