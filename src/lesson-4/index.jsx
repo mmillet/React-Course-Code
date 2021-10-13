@@ -1,11 +1,8 @@
 import React from 'react';
+import Caculator from './Caculator';
 
 function Lesson4() {
-  return (
-    <div>
-      Lesson4
-    </div>
-  );
+  return <Caculator />;
 }
 
 export default Lesson4;

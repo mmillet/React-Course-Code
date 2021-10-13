@@ -1,0 +1,66 @@
+.order-login {
+  height: 30px;
+  padding: 4px 10px;
+
+  &-user {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    img {
+      height: 16px;
+      width: 16px;
+    }
+
+    h2 {
+      font-size: 18px;
+      font-weight: normal;
+      margin: 0 10px 0 6px;
+    }
+  }
+
+  &-modal {
+    position: absolute;
+    z-index: 999;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, .3);
+
+    &-content {
+      position: absolute;
+      padding: 20px;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 1000;
+      width: 200px;
+      background: #fff;
+      border-radius: 10px;
+
+      h3 {
+        margin: 0;
+      }
+
+      &-form {
+        margin: 20px 0;
+
+        input {
+          height: 48px;
+          line-height: 48px;
+          padding: 0 10px;
+          font-size: 20px;
+          width: 100%;
+        }
+      }
+
+      &-control {
+        text-align: right;
+        button {
+          margin: 0 0 0 10px;
+        }
+      }
+    }
+  }
+}

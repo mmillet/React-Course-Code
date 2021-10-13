@@ -1,4 +1,4 @@
-import React, { useState, useReducer, useRef } from 'react';
+import React, { useState, useReducer, useRef, useEffect } from 'react';
 
 /**
  * 非受控表单
@@ -95,17 +95,25 @@ const FormV3 = () => {
 /**
  * 提取自定义 Hook：UseForm
  */
-const useForm = () => {
+export const useForm = () => {
   const formReducer = (state, action) => ({ ...state, ...action });
   const [values, dispatch] = useReducer(formReducer, {});
-  const getFieldProps = field => {
+  const getFieldProps = (field, options) => {
     return {
       type: 'input',
       value: values[field] || '',
-      onChange: e => dispatch({ [field]: e.target.value }),
+      onChange: e => {
+        dispatch({ [field]: e.target.value });
+        setTimeout(() => {
+          options && options.onChange && options.onChange();
+        });
+      },
     };
   };
-  return [values, getFieldProps];
+
+  const setFieldsValue = field => dispatch(field);
+
+  return [values, getFieldProps, setFieldsValue];
 };
 const FormV4 = () => {
   const [values, getFieldProps] = useForm({});

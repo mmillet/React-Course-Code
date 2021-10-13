@@ -1,0 +1,55 @@
+.caculator {
+  text-align: center;
+  width: 232px;
+  border:1px solid #000;
+  overflow: hidden;
+  border-radius: 10px;
+  background-color: #292a29;
+  font-weight: normal;
+  * {
+    box-sizing: border-box;
+  }
+}
+
+.result-table {
+  height: 80px;
+  line-height: 80px;
+  padding: 0 10px;
+  font-size: 40px;
+  text-align: right;
+  color: white;
+}
+
+.operation-table {
+  font-size: 0;
+  margin: 0 -1px -1px -1px;
+}
+
+.block {
+  display: inline-block;
+  width: 25%;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  font-size: 24px;
+  border-width: 0 1px 1px 0;
+  border-style: solid;
+  border-color: #000;
+  color: #fff;
+  cursor: pointer;
+  &:active {
+    opacity: 0.5;
+  }
+  &--ctrl {
+    background-color: #3e3f3e;
+  }
+  &--num {
+    background-color: #5e5f5e;
+  }
+  &--exp {
+    background-color: #fd8d0e;
+  }
+  &--double {
+    width: 50%;
+  }
+}

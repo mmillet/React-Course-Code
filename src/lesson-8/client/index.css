@@ -1,0 +1,14 @@
+.order {
+  position: absolute;
+  max-width: 750px;
+  min-width: 400px;
+  top: 20px;
+  bottom: 20px;
+  left: 20px;
+  right: 20px;
+  box-shadow: 0 0 4px 0 #ccc;
+}
+
+.order * {
+  box-sizing: border-box;
+}

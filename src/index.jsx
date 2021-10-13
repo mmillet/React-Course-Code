@@ -42,6 +42,7 @@ import UseEffectTimer from './lesson-5/5.3-UseEffectTimer';
 import UseLayoutEffect from './lesson-5/5.4-UseLayoutEffect';
 import UseContextBasic from './lesson-5/5.5-UseContextBasic';
 import HookRule from './lesson-5/5.6-HookRule';
+import ClockPractice from './lesson-5/5.7-Practice';
 
 // lesson 6
 import CustomHook from './lesson-6/6.0-CustomHook';
@@ -50,6 +51,7 @@ import UseCallback from './lesson-6/6.2-UseCallback';
 import UseMemo from './lesson-6/6.3-UseMemo';
 import UseImperativeHandle from './lesson-6/6.4-UseImperativeHandle';
 import UseEffectAsync from './lesson-6/6.5-UseEffectAsync';
+import ClockPracticeV2 from './lesson-6/6.6-Practice';
 
 // lesson 7
 import UseForm from './lesson-7/7.0-UseForm';
@@ -59,9 +61,10 @@ import UseAsync from './lesson-7/7.3-UseAsync';
 import UseReducer from './lesson-7/7.4-UseReducer';
 import UseReducerAndContext from './lesson-7/7.5-UseReducerAndContext';
 import UseShareState from './lesson-7/7.6-UseShareState';
+import ClockPracticeV3 from './lesson-7/7.7-Practice';
 
 // lesson 8
-import Lesson8 from './lesson-8';
+import Lesson8 from './lesson-8/client';
 
 import './index.css';
 
@@ -204,6 +207,10 @@ const pages = [
     title: '5.6-HookRule',
     Component: HookRule,
   },
+  {
+    title: '5.7-Practice',
+    Component: ClockPractice,
+  },
   // lesson 6
   {
     lesson: '6. React Hook 进阶',
@@ -229,6 +236,10 @@ const pages = [
   {
     title: '6.5-UseEffectAsync',
     Component: UseEffectAsync,
+  },
+  {
+    title: '6.6-Practice',
+    Component: ClockPracticeV2,
   },
   // lesson 7
   {
@@ -259,6 +270,10 @@ const pages = [
   {
     title: '7.6-UseShareState',
     Component: UseShareState,
+  },
+  {
+    title: '7.7-Practice',
+    Component: ClockPracticeV3,
   },
   // lesson 8
   {
