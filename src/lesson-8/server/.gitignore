@@ -12,7 +12,7 @@
 /build
 
 # data
-
+/data/order
 
 # misc
 .DS_Store
