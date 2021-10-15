@@ -34,7 +34,7 @@ const useTick = pause => {
 };
 
 const getRemoteTimestamp = async () => {
-  const res = await axios.get('http://120.25.62.254:9999/course/now');
+  const res = await axios.get('https://xiaozhu.run/api/current-time');
   return res.data.data;
 };
 

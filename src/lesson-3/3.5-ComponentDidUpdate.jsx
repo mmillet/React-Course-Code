@@ -13,13 +13,11 @@ class Component extends React.Component {
     // 可以做1：获取 dom
     // console.log(this.myRef.current);
     // 可以做2：ajax
-    axios
-      .get(`http://120.25.62.254:9999/sys/user/${this.props.id}`)
-      .then(res => {
-        this.setState({
-          username: res.data.data.username,
-        });
+    axios.get(`https://xiaozhu.run/api/user/${this.props.id}`).then(res => {
+      this.setState({
+        username: res.data.data.username,
       });
+    });
   }
 
   componentDidUpdate(nextProps) {

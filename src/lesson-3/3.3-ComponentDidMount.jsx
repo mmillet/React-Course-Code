@@ -13,7 +13,7 @@ class Demo extends React.Component {
     // 可以做1：获取 dom
     // console.log(this.myRef.current);
     // 可以做2：ajax
-    axios.get('http://120.25.62.254:9999/sys/user/9527').then(res => {
+    axios.get('https://xiaozhu.run/api/user/9527').then(res => {
       this.setState({
         username: res.data.data.username,
       });

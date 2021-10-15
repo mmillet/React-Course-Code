@@ -25,7 +25,7 @@ const User = ({ id }) => {
     data = {},
     loading,
     error,
-  } = useFetch(`http://120.25.62.254:9999/course/user/${id}`, [id]);
+  } = useFetch(`https://xiaozhu.run/api/user/${id}`, [id]);
   if (error) {
     return <span>{error.msg}</span>;
   }

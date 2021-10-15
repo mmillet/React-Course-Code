@@ -21,7 +21,7 @@ export const useAsync = (promiseFn, dependencies, debounceTimeout) => {
 };
 
 const getUserPromise = async id => {
-  const res = await axios.get(`http://120.25.62.254:9999/course/user/${id}`);
+  const res = await axios.get(`https://xiaozhu.run/api/user/${id}`);
   return res.data.data;
 };
 
@@ -32,7 +32,7 @@ const timeoutPromise = timeout => {
 };
 
 const User = ({ id }) => {
-  const { data, loading } = useAsync(async () => {
+  const { data = {}, loading } = useAsync(async () => {
     await timeoutPromise(1000);
     return await getUserPromise(id);
   }, [id]);
