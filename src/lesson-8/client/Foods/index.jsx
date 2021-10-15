@@ -7,12 +7,10 @@ import { useShareState, ACTION } from '../store';
 const Foods = () => {
   const [tick, setTick] = useState(5);
   const { data: foods, loading } = useFetch(
-    'http://120.25.62.254:9000/api/foods',
+    'https://xiaozhu.run/api/foods',
     []
   );
-  const { data: orderMap } = useFetch('http://120.25.62.254:9000/api/orders', [
-    tick,
-  ]);
+  const { data: orderMap } = useFetch('https://xiaozhu.run/api/orders', [tick]);
   const { dispatch } = useShareState();
 
   useEffect(() => {
