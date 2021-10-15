@@ -6,9 +6,13 @@ const computeSign = ['+', '-', '×', '÷', '%', '='];
 
 class Caculator extends React.Component {
   state = {
+    // 本次输入
     input: '0',
+    // 上一次输入
     lastInput: '0',
+    // 当前运算符
     sign: '=',
+    // 是否是最后输入
     isLastSignInput: false,
   };
 
@@ -74,11 +78,10 @@ class Caculator extends React.Component {
     if (computeSign.includes(value)) {
       this.compute(value);
     } else if (value === '+/-') {
+      const targetResult = -Number(input);
       // 不知道这个键是干嘛的
       this.setState({
-        input: '0',
-        lastInput: '0',
-        sign: '=',
+        input: targetResult,
       });
     } else if (value === '.') {
       if (input === '0' || isLastSignInput) {

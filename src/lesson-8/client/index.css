@@ -1,7 +1,6 @@
 .order {
   position: absolute;
-  max-width: 750px;
-  min-width: 400px;
+  width: 480px;
   top: 20px;
   bottom: 20px;
   left: 20px;

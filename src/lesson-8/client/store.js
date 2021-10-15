@@ -4,6 +4,7 @@ import axios from 'axios';
 
 const initialState = {
   user: '',
+  loginError: '',
   showLogin: false,
   showCartDetail: false,
   foodList: [],
@@ -49,8 +50,16 @@ const reducer = (state, action) => {
         showLogin: action.data,
       };
     case ACTION.SET_USER:
+      if (action.data && !/^[a-z0-9\-_]{4,20}$/.test(action.data)) {
+        return {
+          ...state,
+          loginError: '用户名长度 4~20，包含小写字母、数字、_、-',
+        };
+      }
       return {
         ...state,
+        loginError: '',
+        showLogin: false,
         user: action.data,
       };
     case ACTION.SET_FOOD_LIST:

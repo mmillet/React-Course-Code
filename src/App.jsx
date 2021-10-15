@@ -66,7 +66,7 @@ import ClockPracticeV3 from './lesson-7/7.7-Practice';
 // lesson 8
 import Lesson8 from './lesson-8/client';
 
-import './index.css';
+import './App.css';
 
 const pages = [
   // lesson 1
