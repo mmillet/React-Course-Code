@@ -65,6 +65,7 @@ const BottomCart = () => {
               </div>
             );
           })}
+          {!userOrderList.length && <p>还没有人点单 :(</p>}
         </div>
       )}
       <div className="order-bottom-cart-control">

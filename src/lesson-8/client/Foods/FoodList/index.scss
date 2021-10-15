@@ -5,9 +5,15 @@
   bottom: 60px;
   width: 80%;
   overflow-y: auto;
-  &-group h3 {
-    padding: 0 10px;
-    margin: 0 0 10px;
+
+  &-group > h3 {
+    margin: 0 10px 10px;
+    line-height: 32px;
+    font-weight: normal;
+    font-size: 14px;
+    padding-left: 10px;
+    background-color: #fafafa;
+    border-radius: 6px;
   }
 
   ul {

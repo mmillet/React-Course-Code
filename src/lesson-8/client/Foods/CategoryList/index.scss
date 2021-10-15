@@ -10,7 +10,8 @@
     text-align: center;
     cursor: pointer;
     &.active {
-      font-weight: bold;
+      font-weight: 500;
+      color: #f23c39;
     }
   }
 }

@@ -10,6 +10,7 @@ const initialState = {
   foodList: [],
   categoryList: [],
   orderMap: [],
+  focusCategoryId: null,
 };
 
 const ACTION = {
@@ -19,6 +20,7 @@ const ACTION = {
   SET_ORDER_MAP: 4, // 设置订单
   TOGGLE_CART_DETAIL: 5, // 购物车详情
   UPDATE_ORDER: 6, // 更新订单（点餐）
+  SET_FOCUS_CATEGORY_ID: 7, // 设置当前高亮的分组
 };
 
 // 更新订单
@@ -92,6 +94,11 @@ const reducer = (state, action) => {
       return {
         ...state,
         orderMap: newOrderMap,
+      };
+    case ACTION.SET_FOCUS_CATEGORY_ID:
+      return {
+        ...state,
+        focusCategoryId: action.data,
       };
     default:
       return state;

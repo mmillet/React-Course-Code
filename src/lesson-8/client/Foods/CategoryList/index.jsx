@@ -1,16 +1,29 @@
 import React from 'react';
-import { useShareState } from '../../store';
+import { useShareState, ACTION } from '../../store';
 
 import './index.scss';
 
 const CategoryList = () => {
-  const { data: categoryList } = useShareState(state => state.categoryList);
+  const {
+    data: { categoryList, focusCategoryId },
+    dispatch,
+  } = useShareState();
+
+  const onScrollToCategory = categoryId => {
+    dispatch({ type: ACTION.SET_FOCUS_CATEGORY_ID, data: categoryId });
+  };
 
   return (
     <div className="order-category-list">
       <ul>
         {categoryList.map(category => (
-          <li key={category.id}>{category.name}</li>
+          <li
+            key={category.id}
+            className={focusCategoryId === category.id ? 'active' : ''}
+            onClick={() => onScrollToCategory(category.id)}
+          >
+            {category.name}
+          </li>
         ))}
       </ul>
     </div>
