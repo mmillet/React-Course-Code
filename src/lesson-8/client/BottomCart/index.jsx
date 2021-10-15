@@ -2,6 +2,7 @@ import React from 'react';
 import _ from 'lodash';
 import { useShareState, ACTION } from '../store';
 
+import orderImage from './order.png';
 import './index.scss';
 
 const BottomCart = () => {
@@ -75,6 +76,7 @@ const BottomCart = () => {
             })
           }
         >
+          <img src={orderImage} />
           <em>{totalCount}</em>
         </i>
         <b>¥{totalMoney}</b>

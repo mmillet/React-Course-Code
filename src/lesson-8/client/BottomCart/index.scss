@@ -12,14 +12,19 @@
     white-space: nowrap;
 
     > i {
-      background-image: url('./order.png');
-      background-size: contain;
       position: absolute;
       left: 25px;
       top: -30px;
       width: 70px;
       height: 70px;
       cursor: pointer;
+      > img {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        left: 0;
+        top: 0;
+      }
       > em {
         position: absolute;
         left: 50%;
