@@ -70,6 +70,7 @@ ul {
 }
 
 .content {
+  position: relative;
   flex-grow: 1;
   padding: 10px 20px;
 }

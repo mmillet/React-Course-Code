@@ -1,8 +1,8 @@
 import axios from 'axios';
 import React, { useState, useEffect } from 'react';
 
-const useAsync = (promiseFn, dependencies, debounceTimeout) => {
-  const [data, setData] = useState({});
+export const useAsync = (promiseFn, dependencies, debounceTimeout) => {
+  const [data, setData] = useState();
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
@@ -21,7 +21,7 @@ const useAsync = (promiseFn, dependencies, debounceTimeout) => {
 };
 
 const getUserPromise = async id => {
-  const res = await axios.get(`http://120.25.62.254:9999/sys/user/${id}`);
+  const res = await axios.get(`http://120.25.62.254:9999/course/user/${id}`);
   return res.data.data;
 };
 

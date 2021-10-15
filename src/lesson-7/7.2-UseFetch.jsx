@@ -1,8 +1,8 @@
 import axios from 'axios';
 import React, { useState, useEffect } from 'react';
 
-const useFetch = (url, dependencies) => {
-  const [data, setData] = useState({});
+export const useFetch = (url, dependencies) => {
+  const [data, setData] = useState();
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
@@ -21,10 +21,11 @@ const useFetch = (url, dependencies) => {
 };
 
 const User = ({ id }) => {
-  const { data, loading, error } = useFetch(
-    `http://120.25.62.254:9999/sys/user/${id}`,
-    [id]
-  );
+  const {
+    data = {},
+    loading,
+    error,
+  } = useFetch(`http://120.25.62.254:9999/course/user/${id}`, [id]);
   if (error) {
     return <span>{error.msg}</span>;
   }

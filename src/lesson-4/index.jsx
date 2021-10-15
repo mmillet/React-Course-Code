@@ -1,7 +1,3 @@
-import React from 'react';
-
-function Caculator() {
-  return <div>TODO</div>;
-}
+import Caculator from './Caculator';
 
 export default Caculator;

@@ -1,0 +1,200 @@
+{
+  "categoryList": [
+    { "name": "凉菜", "id": 1 },
+    { "name": "热菜", "id": 2 },
+    { "name": "汤菜", "id": 3 },
+    { "name": "主食", "id": 4 },
+    { "name": "酒水", "id": 5 }
+  ],
+  "foodList": [
+    {
+      "name": "凉拌鸡丁",
+      "price": 20,
+      "id": 1,
+      "categoryId": 1,
+      "image": "http://p0.meituan.net/rmscashier/b42110a0b54e07d8ed86dadd6adcad9b8836.jpg"
+    },
+    {
+      "name": "手撕兔",
+      "price": 32,
+      "id": 2,
+      "categoryId": 1,
+      "image": "http://p0.meituan.net/rmscashier/87aeafcd9fcd590ba345f631e91f7c0912427.jpg"
+    },
+    {
+      "name": "灯影牛肉",
+      "price": 36,
+      "id": 3,
+      "categoryId": 1,
+      "image": "http://p0.meituan.net/rmscashier/d12e843b1324a89689968bbb0b3814f89638.jpg"
+    },
+    {
+      "name": "凉拌鲫鱼",
+      "price": 20,
+      "id": 4,
+      "categoryId": 1,
+      "image": "http://p0.meituan.net/rmscashier/43f3555584925fe0a4c1496b33b0c85611751.jpg"
+    },
+    {
+      "name": "蓝莓山药",
+      "price": 20,
+      "id": 5,
+      "categoryId": 1,
+      "image": "http://p0.meituan.net/rmscashier/02e2aaf4da2bb4169915fea6620685fa9187.jpg"
+    },
+    {
+      "name": "回锅肉",
+      "price": 20,
+      "id": 6,
+      "categoryId": 2,
+      "image": "http://p0.meituan.net/rmscashier/68196225c3ad1c7acb28eeb0986410a812977.jpg"
+    },
+    {
+      "name": "鱼香肉丝",
+      "price": 20,
+      "id": 7,
+      "categoryId": 2,
+      "image": "http://p0.meituan.net/rmscashier/1138d68dea3811703080a3670cbabb8713484.jpg"
+    },
+    {
+      "name": "太安鱼",
+      "price": 40,
+      "id": 8,
+      "categoryId": 2,
+      "image": "http://p0.meituan.net/rmscashier/1d454550ba50a010ec85be043d055dbc15754.jpg"
+    },
+    {
+      "name": "肝腰合炒",
+      "price": 28,
+      "id": 9,
+      "categoryId": 2,
+      "image": "http://p0.meituan.net/rmscashier/5e7a6420282e0e1841fa984313291e9e12455.jpg"
+    },
+    {
+      "name": "水煮牛蛙",
+      "price": 48,
+      "id": 10,
+      "categoryId": 2,
+      "image": "http://p0.meituan.net/rmscashier/109778b2fd76c03089c017550eb3367910665.jpg"
+    },
+    {
+      "name": "鲜椒鱼蛋",
+      "price": 58,
+      "id": 11,
+      "categoryId": 2,
+      "image": "http://p0.meituan.net/rmscashier/cac1a56754c57d2647670ef4103c2209107269.jpg"
+    },
+    {
+      "name": "蔬菜汤",
+      "price": 15,
+      "id": 12,
+      "categoryId": 3,
+      "image": "http://p0.meituan.net/rmscashier/66bf1b31a303522f1a7f1b1c51648ad79092.jpg"
+    },
+    {
+      "name": "番茄煎蛋汤",
+      "price": 20,
+      "id": 13,
+      "categoryId": 3,
+      "image": "http://p0.meituan.net/rmscashier/c5438ea492d71aeb31d9988b64b0b77f10265.jpg"
+    },
+    {
+      "name": "酸菜胡豆汤",
+      "price": 15,
+      "id": 14,
+      "categoryId": 3,
+      "image": "http://p0.meituan.net/rmscashier/b60054fa6501bd927ad23ed1839ebfec7608.jpg"
+    },
+    {
+      "name": "三鲜汤",
+      "price": 20,
+      "id": 15,
+      "categoryId": 3,
+      "image": "http://p0.meituan.net/rmscashier/f38b38785377d673b084ae823721c7f17528.jpg"
+    },
+    {
+      "name": "青菜丸子汤",
+      "price": 20,
+      "id": 16,
+      "categoryId": 3,
+      "image": "http://p1.meituan.net/rmscashier/40975ddf1a9e413ffd42c067a4495d628983.jpg"
+    },
+    {
+      "name": "米饭",
+      "price": 2,
+      "id": 17,
+      "categoryId": 4,
+      "image": "http://p1.meituan.net/rmscashier/d3e7ff400df74818fd50a0ea3a59c61d5645.jpg"
+    },
+    {
+      "name": "蛋炒饭",
+      "price": 8,
+      "id": 18,
+      "categoryId": 4,
+      "image": "http://p0.meituan.net/rmscashier/ab19d39a991a0ef4336441625ee9956e11887.jpg"
+    },
+    {
+      "name": "葱油面",
+      "price": 6,
+      "id": 19,
+      "categoryId": 4,
+      "image": "http://p0.meituan.net/rmscashier/6b88c370cc8bf5a6fdc5ba80c2486cd9281490.jpg"
+    },
+    {
+      "name": "南瓜饼",
+      "price": 12,
+      "id": 20,
+      "categoryId": 4,
+      "image": "http://p0.meituan.net/rmscashier/55d86a999306c6e243c7c3d0236813657196.jpg"
+    },
+    {
+      "name": "勇闯天涯",
+      "price": 8,
+      "id": 21,
+      "categoryId": 5,
+      "image": "http://p0.meituan.net/rmscashier/07b8abc1066fb3c8e4e7c62ca731c3ea3946.jpg"
+    },
+    {
+      "name": "玉米汁",
+      "price": 20,
+      "id": 22,
+      "categoryId": 5,
+      "image": "http://p0.meituan.net/rmscashier/b9ac50c11bc66d2e055a088184f8d4044024.jpg"
+    },
+    {
+      "name": "大椰奶",
+      "price": 20,
+      "id": 23,
+      "categoryId": 5,
+      "image": "http://p0.meituan.net/rmscashier/c3d621e4fface2717fe6df445cdf079013106.jpg"
+    },
+    {
+      "name": "纯生",
+      "price": 6,
+      "id": 24,
+      "categoryId": 5,
+      "image": "http://p1.meituan.net/rmscashier/2f1b0c2bde1ec0496ca70fba08be2a118879.jpg"
+    },
+    {
+      "name": "可乐",
+      "price": 5,
+      "id": 25,
+      "categoryId": 5,
+      "image": "http://p0.meituan.net/rmscashier/3d4b1afe72a5620252a965db5f37c0eb9559.jpg"
+    },
+    {
+      "name": "雪碧",
+      "price": 5,
+      "id": 26,
+      "categoryId": 5,
+      "image": "http://p0.meituan.net/rmscashier/31afc4117da8cdcfa502c25b46a59fbc9365.jpg"
+    },
+    {
+      "name": "王老吉",
+      "price": 5,
+      "id": 27,
+      "categoryId": 5,
+      "image": "http://p1.meituan.net/rmscashier/0262cd13289e8186f8abd2ddffdbf0ab5392.jpg"
+    }
+  ]
+}

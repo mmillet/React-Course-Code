@@ -20,7 +20,7 @@ const reducer = (state, action) => {
   }
 };
 
-const createReducerContext = (reducer, initialState) => {
+export const createReducerContext = (reducer, initialState) => {
   // 在内部定义一个 StoreContext，用于传递 store
   const StoreContext = React.createContext(initialState);
 
