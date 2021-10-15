@@ -2,7 +2,7 @@ import React from 'react';
 import _ from 'lodash';
 import { useShareState, ACTION } from '../store';
 
-import orderImage from './order.png';
+import orderImage from './order.svg';
 import './index.scss';
 
 const BottomCart = () => {
