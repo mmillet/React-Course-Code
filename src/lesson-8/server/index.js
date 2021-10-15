@@ -3,6 +3,7 @@ const fs = require('fs-extra');
 const path = require('path');
 const klaw = require('klaw');
 const cors = require('cors');
+const Mock = require('mockjs');
 
 const app = express();
 app.use(express.json());
@@ -121,6 +122,23 @@ app.delete('/api/order', async (req, res) => {
     code: 0,
     data: result,
   });
+});
+
+// 获取一个随机用户
+app.get('/api/user/:id', async (req, res) => {
+  res.send({
+    code: 200,
+    data: Mock.mock({
+      id: req.params.id,
+      email: '@email',
+      username: '@cname',
+    }),
+  });
+});
+
+// 获取服务器时间（少1小时）
+app.get('/api/current-time', async (req, res) => {
+  res.send({ code: 0, data: Date.now() - 3600 * 1000 });
 });
 
 app.listen(port, () => {
