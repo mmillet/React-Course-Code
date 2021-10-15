@@ -21,10 +21,11 @@ export const useFetch = (url, dependencies) => {
 };
 
 const User = ({ id }) => {
-  const { data, loading, error } = useFetch(
-    `http://120.25.62.254:9999/course/user/${id}`,
-    [id]
-  );
+  const {
+    data = {},
+    loading,
+    error,
+  } = useFetch(`http://120.25.62.254:9999/course/user/${id}`, [id]);
   if (error) {
     return <span>{error.msg}</span>;
   }

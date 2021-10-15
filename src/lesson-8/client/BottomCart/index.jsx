@@ -21,23 +21,28 @@ const BottomCart = () => {
   );
   let totalMoney = 0;
   let totalCount = 0;
-  const userOrderList = Object.keys(orderMap).map(user => {
-    const userOrder = orderMap[user];
-    let money = 0;
-    const orders = Object.keys(userOrder).map(id => {
-      const food = foodMap[id];
-      const count = userOrder[id];
-      money += food.price * count;
-      totalCount += count;
-      totalMoney += money;
-      return { food, count };
-    });
-    return {
-      money,
-      user,
-      orders,
-    };
-  });
+
+  const userOrderList = !!foodList.length
+    ? Object.keys(orderMap).map(user => {
+        const userOrder = orderMap[user];
+        let money = 0;
+        const orders = Object.keys(userOrder).map(id => {
+          const food = foodMap[id];
+          const count = userOrder[id];
+          money += food.price * count;
+          totalCount += count;
+          totalMoney += money;
+          return { food, count };
+        });
+        return {
+          money,
+          user,
+          orders,
+        };
+      })
+    : [];
+
+  // console.log(foodMap, orderMap, Object.keys(orderMap));
 
   return (
     <div className="order-bottom-cart">

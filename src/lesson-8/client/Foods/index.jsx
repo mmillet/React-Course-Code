@@ -7,10 +7,10 @@ import { useShareState, ACTION } from '../store';
 const Foods = () => {
   const [tick, setTick] = useState(5);
   const { data: foods, loading } = useFetch(
-    'http://127.0.0.1:9000/api/foods',
+    'http://120.25.62.254:9000/api/foods',
     []
   );
-  const { data: orderMap } = useFetch('http://127.0.0.1:9000/api/orders', [
+  const { data: orderMap } = useFetch('http://120.25.62.254:9000/api/orders', [
     tick,
   ]);
   const { dispatch } = useShareState();

@@ -41,7 +41,7 @@ const updateOrderMap = (orderMap, user, id, increment) => {
   }
 
   // 每次更新订单后，将该用户的点餐信息同步到服务端
-  axios.post('http://127.0.0.1:9000/api/order', { user, order: userOrder });
+  axios.post('http://120.25.62.254:9000/api/order', { user, order: userOrder });
 };
 
 const reducer = (state, action) => {
