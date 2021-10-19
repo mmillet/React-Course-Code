@@ -1,0 +1,3 @@
+.user-list hr:last-child{
+  display: none;
+}

@@ -36,7 +36,11 @@ class Demo extends React.Component {
             // 偶数行加深
             isDeep = index % 2 ? 'deep-style' : '';
           }
-          return <p className={`line ${isDeep}`}>{item}</p>;
+          return (
+            <p key={index} className={`line ${isDeep}`}>
+              {item}
+            </p>
+          );
         })}
       </>
     );

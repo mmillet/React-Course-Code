@@ -62,9 +62,9 @@
           <div>
             <button onClick={this.onAddUser}>ADD</button>
             <ul>
-              {this.state.list.map(item => (
-                <li>{item}</li>
-              ))}
+              {this.state.list.map(item => {
+                return <li>{item}</li>;
+              })}
             </ul>
           </div>
         );

@@ -1,6 +1,7 @@
-.line {
-  background-color: #ddd;
+.test-line {
+  background-color: rgb(136, 135, 135);
 }
-.line.even-style {
-  background-color: #aaa;
+
+.even-style {
+  background-color: rgb(218, 214, 214);
 }

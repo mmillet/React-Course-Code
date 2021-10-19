@@ -6,11 +6,18 @@ class Content extends React.Component {
   };
 
   render() {
-    return <div>{this.props.title}</div>;
+    const { title, content } = this.props;
+
+    return (
+      <div>
+        {title}
+        <p>{content}</p>
+      </div>
+    );
   }
 }
 
-const Demo = () => <Content />;
+const Demo = () => <Content content="内容" />;
 
 // 多个 Props 可以覆盖部分
 

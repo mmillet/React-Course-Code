@@ -1,18 +1,11 @@
 import React from 'react';
 
-class Component extends React.Component {
+class Component extends React.PureComponent {
   constructor(props) {
     super(props);
     this.state = {
       text: 'text',
     };
-  }
-
-  shouldComponentUpdate(nextProps, nextState) {
-    if (this.state.text === nextState.text) {
-      return false;
-    }
-    return true;
   }
 
   // PureComponent
@@ -27,7 +20,7 @@ class Component extends React.Component {
     console.log('Component Render', this.state.text);
     return (
       <p>
-        count: {this.props.count} <br />
+        count: {this.props.data.count} <br />
         text: {this.state.text}
       </p>
     );
@@ -42,15 +35,19 @@ class Demo extends React.Component {
   componentDidMount() {
     setInterval(() => {
       // console.log(`Demo setInterval run`);
-      this.setState({
-        count: this.state.count + 1,
-      });
+      this.state.count++;
+      this.forceUpdate();
     }, 1000);
   }
 
   render() {
     // console.log(`Demo Render`, this.state.count);
-    return <Component count={this.state.count} />;
+    return (
+      <>
+        <div>父组件：{this.state.count}</div>
+        <Component data={this.state} />
+      </>
+    );
   }
 }
 

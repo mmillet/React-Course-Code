@@ -3,7 +3,22 @@ import React from 'react';
 class Demo extends React.Component {
   render() {
     const num = 2 * 3;
-    return <div>2 * 3 = {num}</div>;
+    return (
+      <>
+        {1 + 1}
+        <div>
+          2 * 3 = iiii
+          {[1, 2, 3].map((num, index) => {
+            return (
+              <div key={num}>
+                {/* {num}:{index} */}
+                {/* {`${num}:${index * 5}`} */}
+              </div>
+            );
+          })}
+        </div>
+      </>
+    );
   }
 }
 
