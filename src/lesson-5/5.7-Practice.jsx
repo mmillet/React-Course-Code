@@ -24,7 +24,7 @@ const Clock = () => {
   useEffect(() => {
     timer = setTimeout(() => {
       setTick(tick + 1);
-    }, 1000);
+    }, 100);
     return () => {
       clearTimeout(timer);
     };
@@ -61,13 +61,14 @@ const Clock = () => {
       <div className="minute" style={style.minute}></div>
       <div className="second" style={style.second}></div>
       <div className="time">{formatedDate}</div>
+      {tick}
     </div>
   );
 };
 
 const Demo = () => {
   return (
-    <AlarmContext.Provider value={{ time: '19:09:16', message: '起床了' }}>
+    <AlarmContext.Provider value={{ time: '12:20:00', message: '下课了' }}>
       <Clock />
     </AlarmContext.Provider>
   );

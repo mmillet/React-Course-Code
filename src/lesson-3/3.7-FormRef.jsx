@@ -11,6 +11,11 @@ export default class NameForm extends React.Component {
     event.preventDefault();
   };
 
+  handleReset = event => {
+    this.inputRef.current.value = '';
+    event.preventDefault();
+  };
+
   render() {
     return (
       <form onSubmit={this.handleSubmit}>
@@ -19,6 +24,7 @@ export default class NameForm extends React.Component {
           <input type="text" ref={this.inputRef} />
         </label>
         <input type="submit" value="提交" />
+        <button onClick={this.handleReset}>重置</button>
       </form>
     );
   }

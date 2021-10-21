@@ -1,6 +1,21 @@
 import axios from 'axios';
 import React, { useState, useEffect } from 'react';
 
+// const wait = timeout => {
+//   return new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//       resolve();
+//     }, timeout);
+//   });
+// };
+
+// const test = async () => {
+//   console.log('hello');
+//   await wait(2000);
+//   console.log('world');
+// };
+// test();
+
 export const useFetch = (url, dependencies) => {
   const [data, setData] = useState();
   const [loading, setLoading] = useState(true);
@@ -20,12 +35,16 @@ export const useFetch = (url, dependencies) => {
   return { data, loading, error };
 };
 
+// await wait(2000);
+// await fetch('...');
+
 const User = ({ id }) => {
   const {
     data = {},
     loading,
     error,
   } = useFetch(`https://xiaozhu.run/api/user/${id}`, [id]);
+
   if (error) {
     return <span>{error.msg}</span>;
   }

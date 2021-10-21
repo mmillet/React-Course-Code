@@ -1,10 +1,11 @@
 import React from 'react';
-import Login from './Login';
-import BottomCart from './BottomCart';
-import Foods from './Foods';
 import { ShareStateProvider } from './store';
 
-import './index.scss';
+import Login from './Login';
+import Foods from './Foods';
+import BottomCart from './BottomCart';
+
+import './index.css';
 
 const App = () => {
   return (

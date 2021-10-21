@@ -32,16 +32,21 @@ class Demo extends React.Component {
     count: 0,
   };
 
+  timer = 0;
+
   componentDidMount() {
-    setInterval(() => {
-      // console.log(`Demo setInterval run`);
-      this.state.count++;
-      this.forceUpdate();
+    this.timer = setInterval(() => {
+      console.log(`Demo setInterval run`);
+      this.setState({ count: this.state.count + 1 });
     }, 1000);
   }
 
+  componentWillUnmount() {
+    console.log('willUnmount');
+    clearTimeout(this.timer);
+  }
+
   render() {
-    // console.log(`Demo Render`, this.state.count);
     return (
       <>
         <div>父组件：{this.state.count}</div>

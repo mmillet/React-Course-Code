@@ -14,24 +14,26 @@ function Demo() {
     setUser(emptyUser);
   };
 
+  const Provider = UserContext.Provider;
+
   return (
     // UserContext.Provider 提供 context 值
-    <UserContext.Provider value={user}>
-      <UserLogin onLogin={onLogin} onLogout={onLogout} />
+    <Provider value={{ ...user, onLogin, onLogout }}>
+      <UserLogin />
       <UserCard />
-    </UserContext.Provider>
+    </Provider>
   );
 }
 
-function UserLogin(props) {
+function UserLogin() {
   // 获取 UserContext 当前的值，类似于 <UserContext.Consumer />
   const user = useContext(UserContext);
   return (
     <div>
       {user.name ? (
-        <button onClick={props.onLogout}>Logout</button>
+        <button onClick={user.onLogout}>Logout</button>
       ) : (
-        <button onClick={props.onLogin}>Login</button>
+        <button onClick={user.onLogin}>Login</button>
       )}
     </div>
   );

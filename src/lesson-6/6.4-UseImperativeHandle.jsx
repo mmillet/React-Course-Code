@@ -35,13 +35,16 @@ const Add = (props, ref) => {
 const AddWithRef = forwardRef(Add);
 
 const Demo = () => {
-  const addRef = useRef(null);
+  const addRef = useRef();
   const reset = () => addRef.current.reset();
+
+  const getCount = () => console.log(addRef.current.count);
 
   return (
     <>
       <AddWithRef ref={addRef} initialCount={10} />
       <button onClick={reset}>Reset</button>
+      <button onClick={getCount}>Get Count</button>
     </>
   );
 };
