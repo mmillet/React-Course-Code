@@ -104,21 +104,28 @@ export const useForm = () => {
       value: values[field] || '',
       onChange: e => {
         dispatch({ [field]: e.target.value });
-        setTimeout(() => {
-          options && options.onChange && options.onChange();
-        });
+        // setTimeout(() => {
+        //   options && options.onChange && options.onChange();
+        // });
       },
     };
   };
 
-  const setFieldsValue = field => dispatch(field);
+  const setFieldsValue = values => dispatch(values);
 
   return [values, getFieldProps, setFieldsValue];
 };
 const FormV4 = () => {
-  const [values, getFieldProps] = useForm({});
+  const [values, getFieldProps, setFieldsValue] = useForm({});
   return (
     <form>
+      <button
+        onClick={() => {
+          setFieldsValue({ name: 'millet' });
+        }}
+      >
+        Set Value
+      </button>
       <p>
         <label>Name: </label>
         <input {...getFieldProps('name')} />

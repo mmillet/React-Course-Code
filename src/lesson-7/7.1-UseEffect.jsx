@@ -8,7 +8,7 @@ const User = ({ id }) => {
 
   useEffect(async () => {
     setLoading(true);
-    const res = await axios.get(`https://xiaozhu.run/api/user/${id}`);
+    const res = await axios.get(`https://xiaozhu.run/api/9999user/${id}`);
     setLoading(false);
     if (res.status === 200 && res.data) {
       setData(res.data.data || {});

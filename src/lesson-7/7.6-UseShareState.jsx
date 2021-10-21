@@ -17,6 +17,8 @@ const reducer = (state, action) => {
         ...state,
         user: { ...state.user, name: action.name },
       };
+    case 'reset':
+      return { ...initialState };
   }
 };
 
@@ -82,14 +84,28 @@ const Friends = () => {
   );
 };
 
+const Dump = () => {
+  const { data, dispatch } = useShareState();
+
+  const onReset = () => {
+    dispatch({ type: 'reset' });
+  };
+
+  return (
+    <div>
+      <div>Dump {JSON.stringify(data)}</div>
+      <button onClick={onReset}>重置</button>
+    </div>
+  );
+};
+
 const Demo = () => {
   return (
-    <>
-      <ShareStateProvider>
-        <User />
-        <Friends />
-      </ShareStateProvider>
-    </>
+    <ShareStateProvider>
+      <Dump />
+      <User />
+      <Friends />
+    </ShareStateProvider>
   );
 };
 

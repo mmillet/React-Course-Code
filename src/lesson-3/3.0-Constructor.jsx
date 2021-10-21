@@ -2,13 +2,16 @@ import React from 'react';
 
 class Demo extends React.Component {
   constructor(props) {
-    // super();
-    // console.log(this.props); // undefinded
     super(props);
-    console.log(this.props);
+    //
+    this.state = {
+      title: 'hello' + Date.now(),
+    };
   }
+
   render() {
-    return <p>Constructor</p>;
+    console.log(this.props);
+    return <p>Constructor {this.state.title}</p>;
   }
 }
 

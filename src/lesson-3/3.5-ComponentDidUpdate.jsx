@@ -9,20 +9,28 @@ class Component extends React.Component {
     };
   }
 
+  getUser = async () => {
+    const res = await axios.get(
+      `https://xiaozhu.run/api/user/${this.props.id}`
+    );
+    this.setState({
+      username: res.data.data.username,
+    });
+  };
+
   componentDidMount() {
     // 可以做1：获取 dom
     // console.log(this.myRef.current);
     // 可以做2：ajax
-    axios.get(`https://xiaozhu.run/api/user/${this.props.id}`).then(res => {
-      this.setState({
-        username: res.data.data.username,
-      });
-    });
+    this.getUser();
   }
 
-  componentDidUpdate(nextProps) {
+  componentDidUpdate(prevProps) {
     // 🤔 当id变化时，重新请求用户信息
-    console.log(nextProps);
+    console.log(prevProps);
+    if (prevProps.id !== this.props.id) {
+      this.getUser();
+    }
   }
 
   render() {

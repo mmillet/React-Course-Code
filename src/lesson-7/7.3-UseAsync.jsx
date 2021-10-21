@@ -1,6 +1,16 @@
 import axios from 'axios';
 import React, { useState, useEffect } from 'react';
 
+import _ from 'lodash';
+
+const hello = () => {
+  console.log('在吗？');
+};
+
+window.debouncedHello = _.debounce(hello, 1000);
+
+window.throttledHello = _.throttle(hello, 2000);
+
 export const useAsync = (promiseFn, dependencies, debounceTimeout) => {
   const [data, setData] = useState();
   const [loading, setLoading] = useState(true);
@@ -9,8 +19,7 @@ export const useAsync = (promiseFn, dependencies, debounceTimeout) => {
   useEffect(async () => {
     setLoading(true);
     try {
-      const res = await promiseFn();
-      setData(res);
+      setData(await promiseFn());
     } catch (e) {
       setError(error);
     }
@@ -25,11 +34,8 @@ const getUserPromise = async id => {
   return res.data.data;
 };
 
-const timeoutPromise = timeout => {
-  return new Promise(resolve => {
-    setTimeout(() => resolve(), timeout);
-  });
-};
+const timeoutPromise = timeout =>
+  new Promise(resolve => setTimeout(resolve, timeout));
 
 const User = ({ id }) => {
   const { data = {}, loading } = useAsync(async () => {

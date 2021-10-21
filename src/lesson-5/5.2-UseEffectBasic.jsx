@@ -2,11 +2,12 @@ import React, { useState, useEffect } from 'react';
 
 const Component = props => {
   useEffect(() => {
-    // 更新
-    console.log('Update');
-    // 销毁
-    return () => console.log('Destroy');
+    const timer = setTimeout(() => {
+      props.onAdd();
+    }, 1000);
+    return () => clearTimeout(timer);
   }, [props.count]);
+
   return <div>Effect Hook {props.count}</div>;
 };
 
@@ -21,7 +22,9 @@ const App = () => {
       </button>
       {/* 计数 + 1 */}
       <button onClick={() => setCount(count + 1)}>Add</button>
-      {destroy ? null : <Component count={count} />}
+      {destroy ? null : (
+        <Component count={count} onAdd={() => setCount(count + 1)} />
+      )}
     </div>
   );
 };

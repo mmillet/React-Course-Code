@@ -13,7 +13,6 @@ const AlarmContext = React.createContext({});
 
 const useTick = pause => {
   const [tick, setTick] = useState(0);
-
   let timer = 0;
   useEffect(() => {
     if (pause) {
@@ -80,9 +79,7 @@ const Clock = (props, ref) => {
   }, [tick]);
 
   // 打印渲染次数和秒数;
-  useEffect(() => {
-    console.log(`render`, tick);
-  });
+  console.log(`render`, tick);
 
   return (
     <div className="clock">

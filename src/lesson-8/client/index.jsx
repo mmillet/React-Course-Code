@@ -4,7 +4,7 @@ import BottomCart from './BottomCart';
 import Foods from './Foods';
 import { ShareStateProvider } from './store';
 
-import './index.css';
+import './index.scss';
 
 const App = () => {
   return (
