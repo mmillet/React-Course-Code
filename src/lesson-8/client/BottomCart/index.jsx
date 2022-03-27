@@ -42,7 +42,6 @@ const BottomCart = () => {
       })
     : [];
 
-  console.log(`totalMoney`, totalMoney);
   // console.log(foodMap, orderMap, Object.keys(orderMap));
 
   return (
