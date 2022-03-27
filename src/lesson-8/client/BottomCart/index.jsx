@@ -31,9 +31,9 @@ const BottomCart = () => {
           const count = userOrder[id];
           money += food.price * count;
           totalCount += count;
-          totalMoney += money;
           return { food, count };
         });
+        totalMoney += money;
         return {
           money,
           user,
@@ -42,6 +42,7 @@ const BottomCart = () => {
       })
     : [];
 
+  console.log(`totalMoney`, totalMoney);
   // console.log(foodMap, orderMap, Object.keys(orderMap));
 
   return (
